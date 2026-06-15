@@ -3,212 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alex Rivera — Software Engineer</title>
+<title>Li Wei — Senior SAP Basis Consultant</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="sidenav">
-  <div class="nav-top">
-    <span class="logo">AR<span class="dot">.</span></span>
-  </div>
-  <ul class="nav-links">
-    <li><a href="#about" class="active"><span class="path">~/about</span></a></li>
-    <li><a href="#projects"><span class="path">~/projects</span></a></li>
-    <li><a href="#skills"><span class="path">~/skills</span></a></li>
-    <li><a href="#contact"><span class="path">~/contact</span></a></li>
-  </ul>
-  <div class="nav-bottom">
-    <span class="status"><span class="status-dot"></span> open to work</span>
-  </div>
-</nav>
-
 <header class="topbar">
-  <span class="logo">AR<span class="dot">.</span></span>
+  <span class="logo">LW</span>
+  <nav class="nav">
+    <a href="#overview">Overview</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
   <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </header>
-<ul class="nav-links mobile">
-  <li><a href="#about"><span class="path">~/about</span></a></li>
-  <li><a href="#projects"><span class="path">~/projects</span></a></li>
-  <li><a href="#skills"><span class="path">~/skills</span></a></li>
-  <li><a href="#contact"><span class="path">~/contact</span></a></li>
-</ul>
+<nav class="nav mobile">
+  <a href="#overview">Overview</a>
+  <a href="#experience">Experience</a>
+  <a href="#skills">Skills</a>
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+</nav>
 
 <main>
 
-  <section class="hero" id="about">
-    <div class="terminal" aria-hidden="false">
-      <div class="terminal-bar">
-        <div class="terminal-dots">
-          <span></span><span></span><span></span>
-        </div>
-        <span class="terminal-title">alex@portfolio: ~</span>
-      </div>
-      <div class="terminal-body">
-        <p class="line"><span class="prompt">$</span> <span class="typed" id="typed-line"></span><span class="cursor">▍</span></p>
-        <div class="output" id="terminal-output">
-          <p><span class="key">name</span>: Alex Rivera</p>
-          <p><span class="key">role</span>: Software Engineer</p>
-          <p><span class="key">focus</span>: backend systems, developer tooling, distributed infra</p>
-          <p><span class="key">based_in</span>: Remote / Earth</p>
-        </div>
-      </div>
-    </div>
-
+  <!-- HERO: System status board -->
+  <section class="hero" id="overview">
     <div class="hero-text">
-      <h1>Hi, I'm Alex Rivera.<br>I build things that run quietly and reliably.</h1>
+      <p class="eyebrow">Senior SAP Basis Consultant</p>
+      <h1>Li Wei</h1>
       <p class="lede">
-        Software engineer focused on backend systems, APIs, and the unglamorous infrastructure
-        that keeps products working. I like clear interfaces, fast feedback loops, and
-        code that's easy to delete.
+        Over 10 years keeping large-scale SAP landscapes online, fast, and current.
+        I manage system performance, drive upgrades and migrations, and make sure
+        the infrastructure underneath the business stays invisible — because it
+        never breaks.
       </p>
-      <a class="cta" href="#projects">View projects →</a>
+      <div class="hero-meta">
+        <span>Beijing, China</span>
+        <span class="sep">·</span>
+        <a href="https://himalayas.app/@liwei" target="_blank" rel="noopener">himalayas.app/@liwei</a>
+      </div>
+      <div class="hero-actions">
+        <a class="cta" href="#contact">Get in touch</a>
+        <a class="cta cta-secondary" href="#experience">View experience</a>
+      </div>
+    </div>
+
+    <div class="status-board" aria-label="Career impact metrics">
+      <div class="board-header">
+        <span class="board-dot"></span>
+        <span class="board-title">SYSTEM STATUS — LIVE</span>
+      </div>
+      <div class="board-grid">
+        <div class="metric" data-target="99.9" data-suffix="%">
+          <span class="metric-value"><span class="counter">0</span><span class="metric-suffix">%</span></span>
+          <span class="metric-label">System uptime maintained</span>
+          <div class="metric-bar"><div class="metric-fill" data-fill="99.9"></div></div>
+        </div>
+        <div class="metric" data-target="30" data-suffix="%">
+          <span class="metric-value"><span class="counter">0</span><span class="metric-suffix">%</span></span>
+          <span class="metric-label">Performance improvement</span>
+          <div class="metric-bar"><div class="metric-fill" data-fill="30"></div></div>
+        </div>
+        <div class="metric" data-target="50" data-suffix="%">
+          <span class="metric-value"><span class="counter">0</span><span class="metric-suffix">%</span></span>
+          <span class="metric-label">Downtime reduced in S/4HANA migration</span>
+          <div class="metric-bar"><div class="metric-fill" data-fill="50"></div></div>
+        </div>
+        <div class="metric" data-target="20" data-suffix="+">
+          <span class="metric-value"><span class="counter">0</span><span class="metric-suffix">+</span></span>
+          <span class="metric-label">SAP instances managed</span>
+          <div class="metric-bar"><div class="metric-fill" data-fill="80"></div></div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="projects" id="projects">
-    <h2><span class="path">~/projects</span></h2>
-    <div class="project-grid">
+  <!-- EXPERIENCE: Landscape timeline -->
+  <section class="experience" id="experience">
+    <p class="eyebrow">Career landscape</p>
+    <h2>Experience</h2>
 
-      <article class="project-card">
-        <div class="project-head">
-          <h3>Project Name One</h3>
-          <span class="tag">API</span>
+    <div class="landscape">
+      <div class="landscape-line" aria-hidden="true"></div>
+
+      <article class="node">
+        <div class="node-marker node-current">
+          <span class="ping"></span>
         </div>
-        <p>Short description of what this project does, the problem it solves, and the
-        impact it had. Replace this with your own project summary.</p>
-        <div class="project-meta">
-          <span class="stack">Node.js · PostgreSQL · Docker</span>
-          <div class="links">
-            <a href="#">Code</a>
-            <a href="#">Live</a>
+        <div class="node-content">
+          <div class="node-head">
+            <h3>Senior SAP Basis Consultant</h3>
+            <span class="node-status status-online">ONLINE</span>
           </div>
+          <p class="node-company">Tianjin Tech Solutions — Beijing, China</p>
+          <p class="node-date">Mar 2021 — Present</p>
+          <ul>
+            <li>Managed SAP Basis administration for over 20 SAP instances, ensuring 99.9% system uptime.</li>
+            <li>Implemented performance optimization strategies that improved overall system performance by 30%.</li>
+            <li>Led a cross-functional team in a successful SAP S/4HANA migration project, reducing downtime by 50%.</li>
+          </ul>
         </div>
       </article>
 
-      <article class="project-card">
-        <div class="project-head">
-          <h3>Project Name Two</h3>
-          <span class="tag">Tooling</span>
-        </div>
-        <p>Short description of what this project does, the problem it solves, and the
-        impact it had. Replace this with your own project summary.</p>
-        <div class="project-meta">
-          <span class="stack">Python · CLI · GitHub Actions</span>
-          <div class="links">
-            <a href="#">Code</a>
-            <a href="#">Live</a>
+      <article class="node">
+        <div class="node-marker"></div>
+        <div class="node-content">
+          <div class="node-head">
+            <h3>SAP Basis Consultant</h3>
+            <span class="node-status status-archived">ARCHIVED</span>
           </div>
+          <p class="node-company">Shanghai Global Consulting — Shanghai, China</p>
+          <p class="node-date">Jan 2016 — Feb 2021</p>
+          <ul>
+            <li>Administered SAP systems across HANA and NetWeaver platforms, enhancing system reliability.</li>
+            <li>Conducted regular system health checks and applied patches to maintain security standards.</li>
+            <li>Developed documentation and training materials for junior consultants, improving team productivity.</li>
+          </ul>
         </div>
       </article>
-
-      <article class="project-card">
-        <div class="project-head">
-          <h3>Project Name Three</h3>
-          <span class="tag">Infra</span>
-        </div>
-        <p>Short description of what this project does, the problem it solves, and the
-        impact it had. Replace this with your own project summary.</p>
-        <div class="project-meta">
-          <span class="stack">Go · AWS · Terraform</span>
-          <div class="links">
-            <a href="#">Code</a>
-            <a href="#">Live</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-head">
-          <h3>Project Name Four</h3>
-          <span class="tag">Web</span>
-        </div>
-        <p>Short description of what this project does, the problem it solves, and the
-        impact it had. Replace this with your own project summary.</p>
-        <div class="project-meta">
-          <span class="stack">React · TypeScript · Vite</span>
-          <div class="links">
-            <a href="#">Code</a>
-            <a href="#">Live</a>
-          </div>
-        </div>
-      </article>
-
     </div>
   </section>
 
+  <!-- SKILLS: status grid -->
   <section class="skills" id="skills">
-    <h2><span class="path">~/skills</span></h2>
+    <p class="eyebrow">Capabilities</p>
+    <h2>Skills</h2>
     <div class="skills-grid">
-      <div class="skill-group">
-        <h4>Languages</h4>
-        <ul>
-          <li>JavaScript / TypeScript</li>
-          <li>Python</li>
-          <li>Go</li>
-          <li>SQL</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h4>Backend & Infra</h4>
-        <ul>
-          <li>Node.js / Express</li>
-          <li>PostgreSQL / Redis</li>
-          <li>Docker / Kubernetes</li>
-          <li>AWS</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h4>Frontend</h4>
-        <ul>
-          <li>React</li>
-          <li>HTML / CSS</li>
-          <li>Vite</li>
-          <li>Accessibility basics</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h4>Tools & Practices</h4>
-        <ul>
-          <li>Git / GitHub Actions</li>
-          <li>Testing (unit & integration)</li>
-          <li>Terraform</li>
-          <li>Code review</li>
-        </ul>
-      </div>
+      <div class="skill-chip"><span class="chip-dot"></span>SAP Basis Administration</div>
+      <div class="skill-chip"><span class="chip-dot"></span>SAP HANA</div>
+      <div class="skill-chip"><span class="chip-dot"></span>System Performance Tuning</div>
+      <div class="skill-chip"><span class="chip-dot"></span>SAP Upgrade Management</div>
+      <div class="skill-chip"><span class="chip-dot"></span>Troubleshooting</div>
+      <div class="skill-chip"><span class="chip-dot"></span>Project Management</div>
     </div>
   </section>
 
+  <!-- EDUCATION -->
+  <section class="education" id="education">
+    <p class="eyebrow">Foundation</p>
+    <h2>Education</h2>
+    <div class="edu-card">
+      <div class="edu-head">
+        <h3>M.S. Information Technology</h3>
+        <span class="edu-date">2012 — 2014</span>
+      </div>
+      <p class="edu-school">Tsinghua University, Beijing, China</p>
+      <p>Specialized in enterprise system management and optimization, with a focus on SAP technologies.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section class="contact" id="contact">
-    <h2><span class="path">~/contact</span></h2>
-    <p class="contact-lede">Have a project, role, or idea you want to talk through? My inbox is open.</p>
+    <p class="eyebrow">Let's connect</p>
+    <h2>Contact</h2>
+    <p class="contact-lede">Open to senior SAP Basis and infrastructure roles. Reach out any time.</p>
     <div class="contact-grid">
-      <a class="contact-link" href="mailto:alex@example.com">
+      <a class="contact-link" href="mailto:li.wei@example.com">
         <span class="label">Email</span>
-        <span class="value">alex@example.com</span>
+        <span class="value">li.wei@example.com</span>
       </a>
-      <a class="contact-link" href="https://github.com/yourusername" target="_blank" rel="noopener">
-        <span class="label">GitHub</span>
-        <span class="value">github.com/yourusername</span>
+      <a class="contact-link" href="tel:+8613800134567">
+        <span class="label">Phone</span>
+        <span class="value">+86 138 0013 4567</span>
       </a>
-      <a class="contact-link" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">
-        <span class="label">LinkedIn</span>
-        <span class="value">linkedin.com/in/yourusername</span>
+      <a class="contact-link" href="https://himalayas.app/@liwei" target="_blank" rel="noopener">
+        <span class="label">Profile</span>
+        <span class="value">himalayas.app/@liwei</span>
       </a>
-      <a class="contact-link" href="#">
-        <span class="label">Resume</span>
-        <span class="value">Download PDF</span>
-      </a>
+      <div class="contact-link">
+        <span class="label">Location</span>
+        <span class="value">Beijing, China</span>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2026 Alex Rivera. Built from scratch.</p>
+    <p>&copy; 2026 Li Wei. All systems operational.</p>
   </footer>
 
 </main>

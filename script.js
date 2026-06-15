@@ -1,13 +1,12 @@
 // Mobile menu toggle
 const menuToggle = document.querySelector('.menu-toggle');
-const mobileNav = document.querySelector('.nav-links.mobile');
+const mobileNav = document.querySelector('.nav.mobile');
 
 menuToggle.addEventListener('click', () => {
   const isOpen = mobileNav.classList.toggle('open');
   menuToggle.setAttribute('aria-expanded', isOpen);
 });
 
-// Close mobile nav after clicking a link
 mobileNav.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     mobileNav.classList.remove('open');
@@ -15,43 +14,66 @@ mobileNav.querySelectorAll('a').forEach(link => {
   });
 });
 
-// Terminal typing effect
-const typedEl = document.getElementById('typed-line');
-const outputEl = document.getElementById('terminal-output');
-const command = 'whoami --verbose';
-
+// Animated counters + metric bars (run once, on load)
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if (prefersReducedMotion) {
-  typedEl.textContent = command;
-  outputEl.classList.add('visible');
-} else {
-  let i = 0;
-  function typeChar() {
-    if (i < command.length) {
-      typedEl.textContent += command.charAt(i);
-      i++;
-      setTimeout(typeChar, 45);
-    } else {
-      setTimeout(() => outputEl.classList.add('visible'), 300);
-    }
+function animateCounter(el, target) {
+  const isDecimal = target % 1 !== 0;
+  const duration = 1400;
+  const start = performance.now();
+
+  function step(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+    const value = target * eased;
+    el.textContent = isDecimal ? value.toFixed(1) : Math.round(value);
+    if (progress < 1) requestAnimationFrame(step);
   }
-  setTimeout(typeChar, 500);
+  requestAnimationFrame(step);
 }
 
-// Active nav link highlighting on scroll
-const sections = document.querySelectorAll('main section');
-const navLinks = document.querySelectorAll('.sidenav .nav-links a');
+function runMetrics() {
+  document.querySelectorAll('.metric').forEach(metric => {
+    const target = parseFloat(metric.dataset.target);
+    const counterEl = metric.querySelector('.counter');
+    const fillEl = metric.querySelector('.metric-fill');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.getAttribute('id');
-      navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-      });
+    if (prefersReducedMotion) {
+      counterEl.textContent = metric.dataset.target;
+      fillEl.style.width = fillEl.dataset.fill + '%';
+      return;
     }
-  });
-}, { rootMargin: '-40% 0px -50% 0px' });
 
-sections.forEach(section => observer.observe(section));
+    animateCounter(counterEl, target);
+    requestAnimationFrame(() => {
+      fillEl.style.width = fillEl.dataset.fill + '%';
+    });
+  });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(runMetrics, 300);
+});
+
+// Scroll-reveal for sections
+const revealTargets = document.querySelectorAll('.node-content, .skill-chip, .edu-card');
+
+if (!prefersReducedMotion) {
+  revealTargets.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  });
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealTargets.forEach(el => revealObserver.observe(el));
+}
