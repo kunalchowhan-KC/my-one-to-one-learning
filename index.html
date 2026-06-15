@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Rivera — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="sidenav">
+  <div class="nav-top">
+    <span class="logo">AR<span class="dot">.</span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about" class="active"><span class="path">~/about</span></a></li>
+    <li><a href="#projects"><span class="path">~/projects</span></a></li>
+    <li><a href="#skills"><span class="path">~/skills</span></a></li>
+    <li><a href="#contact"><span class="path">~/contact</span></a></li>
+  </ul>
+  <div class="nav-bottom">
+    <span class="status"><span class="status-dot"></span> open to work</span>
+  </div>
+</nav>
+
+<header class="topbar">
+  <span class="logo">AR<span class="dot">.</span></span>
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<ul class="nav-links mobile">
+  <li><a href="#about"><span class="path">~/about</span></a></li>
+  <li><a href="#projects"><span class="path">~/projects</span></a></li>
+  <li><a href="#skills"><span class="path">~/skills</span></a></li>
+  <li><a href="#contact"><span class="path">~/contact</span></a></li>
+</ul>
+
+<main>
+
+  <section class="hero" id="about">
+    <div class="terminal" aria-hidden="false">
+      <div class="terminal-bar">
+        <div class="terminal-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="terminal-title">alex@portfolio: ~</span>
+      </div>
+      <div class="terminal-body">
+        <p class="line"><span class="prompt">$</span> <span class="typed" id="typed-line"></span><span class="cursor">▍</span></p>
+        <div class="output" id="terminal-output">
+          <p><span class="key">name</span>: Alex Rivera</p>
+          <p><span class="key">role</span>: Software Engineer</p>
+          <p><span class="key">focus</span>: backend systems, developer tooling, distributed infra</p>
+          <p><span class="key">based_in</span>: Remote / Earth</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-text">
+      <h1>Hi, I'm Alex Rivera.<br>I build things that run quietly and reliably.</h1>
+      <p class="lede">
+        Software engineer focused on backend systems, APIs, and the unglamorous infrastructure
+        that keeps products working. I like clear interfaces, fast feedback loops, and
+        code that's easy to delete.
+      </p>
+      <a class="cta" href="#projects">View projects →</a>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2><span class="path">~/projects</span></h2>
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-head">
+          <h3>Project Name One</h3>
+          <span class="tag">API</span>
+        </div>
+        <p>Short description of what this project does, the problem it solves, and the
+        impact it had. Replace this with your own project summary.</p>
+        <div class="project-meta">
+          <span class="stack">Node.js · PostgreSQL · Docker</span>
+          <div class="links">
+            <a href="#">Code</a>
+            <a href="#">Live</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <h3>Project Name Two</h3>
+          <span class="tag">Tooling</span>
+        </div>
+        <p>Short description of what this project does, the problem it solves, and the
+        impact it had. Replace this with your own project summary.</p>
+        <div class="project-meta">
+          <span class="stack">Python · CLI · GitHub Actions</span>
+          <div class="links">
+            <a href="#">Code</a>
+            <a href="#">Live</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <h3>Project Name Three</h3>
+          <span class="tag">Infra</span>
+        </div>
+        <p>Short description of what this project does, the problem it solves, and the
+        impact it had. Replace this with your own project summary.</p>
+        <div class="project-meta">
+          <span class="stack">Go · AWS · Terraform</span>
+          <div class="links">
+            <a href="#">Code</a>
+            <a href="#">Live</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <h3>Project Name Four</h3>
+          <span class="tag">Web</span>
+        </div>
+        <p>Short description of what this project does, the problem it solves, and the
+        impact it had. Replace this with your own project summary.</p>
+        <div class="project-meta">
+          <span class="stack">React · TypeScript · Vite</span>
+          <div class="links">
+            <a href="#">Code</a>
+            <a href="#">Live</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2><span class="path">~/skills</span></h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <ul>
+          <li>JavaScript / TypeScript</li>
+          <li>Python</li>
+          <li>Go</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Backend & Infra</h4>
+        <ul>
+          <li>Node.js / Express</li>
+          <li>PostgreSQL / Redis</li>
+          <li>Docker / Kubernetes</li>
+          <li>AWS</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Frontend</h4>
+        <ul>
+          <li>React</li>
+          <li>HTML / CSS</li>
+          <li>Vite</li>
+          <li>Accessibility basics</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Tools & Practices</h4>
+        <ul>
+          <li>Git / GitHub Actions</li>
+          <li>Testing (unit & integration)</li>
+          <li>Terraform</li>
+          <li>Code review</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2><span class="path">~/contact</span></h2>
+    <p class="contact-lede">Have a project, role, or idea you want to talk through? My inbox is open.</p>
+    <div class="contact-grid">
+      <a class="contact-link" href="mailto:alex@example.com">
+        <span class="label">Email</span>
+        <span class="value">alex@example.com</span>
+      </a>
+      <a class="contact-link" href="https://github.com/yourusername" target="_blank" rel="noopener">
+        <span class="label">GitHub</span>
+        <span class="value">github.com/yourusername</span>
+      </a>
+      <a class="contact-link" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">
+        <span class="label">LinkedIn</span>
+        <span class="value">linkedin.com/in/yourusername</span>
+      </a>
+      <a class="contact-link" href="#">
+        <span class="label">Resume</span>
+        <span class="value">Download PDF</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Alex Rivera. Built from scratch.</p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
